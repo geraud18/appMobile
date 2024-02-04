@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile.Views.Auths.StarterPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="PORTAL SERVICES"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" FontSize="Large" />
+
+            <StackLayout VerticalOptions="EndAndExpand">
+                <!-- Titre de bienvenue -->
+               
+                <!-- Autres éléments de votre interface utilisateur -->
+
+                <!-- Bouton "GET STARTED" -->
+                <Button Text="GET STARTED"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                        CornerRadius="30"
+                        Clicked="GetStarted_Tapped"/>
+                <BoxView HeightRequest="17" />
+                <!-- Texte "Already have an account? Sign in." avec le lien "Sign in" -->
+                <StackLayout HorizontalOptions="CenterAndExpand">
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Already have an account ? " />
+                                <Span Text="Sign in." TextColor="Red">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="SignIn_Tapped" />
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+                <!-- Espace vertical pour séparation -->
+                <BoxView HeightRequest="35" />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppMobile.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView HeightRequest="100" />
+            <StackLayout Margin="10">
+                <Label Text="SIGN IN" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+            </StackLayout>
+
+            <StackLayout Padding="0" Margin="35,10">
+
+                <Frame BackgroundColor="Transparent" 
+                   BorderColor="DarkGray" Padding="0" 
+                   HorizontalOptions="FillAndExpand" 
+                   CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="SkyBlue" 
+                           HeightRequest="40" WidthRequest="40" 
+                           CornerRadius="30" Padding="0" Margin="5">
+                            <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                        </Frame>
+                        <Entry Placeholder="Email" 
+                       TextColor="HotPink" 
+                       FontAttributes="None" 
+                       HorizontalOptions="FillAndExpand" Margin="0,0,20,0"
+                       x:Name="TxtEmail"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" 
+                   BorderColor="DarkGray" Margin="0,15,0,0" 
+                   Padding="0" HorizontalOptions="FillAndExpand" 
+                   CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="SkyBlue" 
+                           HeightRequest="40" WidthRequest="40" 
+                           CornerRadius="30" Padding="0" Margin="5">
+                            <Image Source="https://images.all-free-download.com/images/graphicthumb/lock_icon_6813906.jpg" Aspect="AspectFill" Margin="0"/>
+                        </Frame>
+                        <Entry Placeholder="Password" 
+                       IsPassword="True" 
+                       TextColor="HotPink" 
+                       FontAttributes="None" 
+                       HorizontalOptions="FillAndExpand" Margin="0,0,20,0"
+                       x:Name="TxtPassword"/>
+                    </StackLayout>
+                </Frame>
+
+                <StackLayout  Orientation="Horizontal">
+                    <Label Text="Forgot Password"
+                       TextColor="HotPink" 
+                       FontAttributes="Bold" 
+                       HorizontalOptions="EndAndExpand" 
+                       FontSize="Small" VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       x:Name="LbtForgotPassword">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="ForgotTap"
+                                Tapped="ForgotTap_Tapped"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <BoxView HeightRequest="20" />
+                <Button Text="SIGN IN" 
+                        BackgroundColor="HotPink" 
+                        TextColor="White" 
+                        CornerRadius="30"
+                        Clicked="BtnSignIn_Clicked"/>
+                <BoxView HeightRequest="20" />
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Still Not Connected ?" TextColor="DarkGray" FontSize="Small"/>
+                    <Label Text="Sign Up"
+                           TextColor="HotPink"
+                           FontAttributes="Bold" 
+                           FontSize="Small"
+                           x:Name="LbtRegister">      
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="RegisterTap"
+                               Tapped="RegisterTap_Tapped"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

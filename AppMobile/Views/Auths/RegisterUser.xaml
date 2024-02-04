@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile.Views.RegisterUser">
+    <ContentPage.Content>
+        <StackLayout>
+            <BoxView HeightRequest="100" />
+            <StackLayout Margin="10">
+                <Label Text="SIGN UP" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+            </StackLayout>
+
+            <StackLayout Padding="0" Margin="35,10">
+
+                <Frame BackgroundColor="Transparent" 
+           BorderColor="DarkGray" Padding="0" 
+           HorizontalOptions="FillAndExpand" 
+           CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="SkyBlue" 
+                   HeightRequest="40" WidthRequest="40" 
+                   CornerRadius="30" Padding="0" Margin="5">
+                            <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                        </Frame>
+                        <Entry Placeholder="Name" 
+               TextColor="HotPink" 
+               FontAttributes="None" 
+               HorizontalOptions="FillAndExpand" Margin="0,0,20,0"
+               x:Name="TxtName"/>
+                    </StackLayout>
+                </Frame>
+                
+                <Frame BackgroundColor="Transparent" 
+           BorderColor="DarkGray" Padding="0" 
+           HorizontalOptions="FillAndExpand" 
+           CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="SkyBlue" 
+                   HeightRequest="40" WidthRequest="40" 
+                   CornerRadius="30" Padding="0" Margin="5">
+                            <Image Source="https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0"/>
+                        </Frame>
+                        <Entry Placeholder="Email" 
+               TextColor="HotPink" 
+               FontAttributes="None" 
+               HorizontalOptions="FillAndExpand" Margin="0,0,20,0"
+               x:Name="TxtEmail"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="Transparent" 
+           BorderColor="DarkGray" Margin="0,15,0,0" 
+           Padding="0" HorizontalOptions="FillAndExpand" 
+           CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="SkyBlue" 
+                   HeightRequest="40" WidthRequest="40" 
+                   CornerRadius="30" Padding="0" Margin="5">
+                            <Image Source="https://images.all-free-download.com/images/graphicthumb/lock_icon_6813906.jpg" Aspect="AspectFill" Margin="0"/>
+                        </Frame>
+                        <Entry Placeholder="Password" 
+               IsPassword="True" 
+               TextColor="HotPink" 
+               FontAttributes="None" 
+               HorizontalOptions="FillAndExpand" Margin="0,0,20,0"
+               x:Name="TxtPassword"/>
+                    </StackLayout>
+                </Frame>
+                
+                <Frame BackgroundColor="Transparent" 
+           BorderColor="DarkGray" Margin="0,15,0,0" 
+           Padding="0" HorizontalOptions="FillAndExpand" 
+           CornerRadius="30">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BackgroundColor="SkyBlue" 
+                   HeightRequest="40" WidthRequest="40" 
+                   CornerRadius="30" Padding="0" Margin="5">
+                            <Image Source="https://images.all-free-download.com/images/graphicthumb/lock_icon_6813906.jpg" Aspect="AspectFill" Margin="0"/>
+                        </Frame>
+                        <Entry Placeholder="Confirm Password" 
+               IsPassword="True" 
+               TextColor="HotPink" 
+               FontAttributes="None" 
+               HorizontalOptions="FillAndExpand" Margin="0,0,20,0"
+               x:Name="TxtConfirmPassword"/>
+                    </StackLayout>
+                </Frame>
+
+                <BoxView HeightRequest="20" />
+                <Button Text="SIGN UP" 
+                        BackgroundColor="HotPink" 
+                        TextColor="White" 
+                        CornerRadius="30"
+                        x:Name="ButtonRegister"
+                        Clicked="ButtonRegister_Clicked"></Button>
+                <BoxView HeightRequest="20" />
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Already have an account ?" TextColor="DarkGray" FontSize="Small"/>
+                    <Label Text="Sign In"
+                   TextColor="HotPink"
+                   FontAttributes="Bold" 
+                   FontSize="Small"
+                   x:Name="LbtLogin">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer x:Name="LoginTap"
+                       Tapped="LoginTap_Tapped"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

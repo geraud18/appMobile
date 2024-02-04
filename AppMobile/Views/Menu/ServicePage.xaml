@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile.Views.Menu.ServicesPage"
+             Title="Services Lists">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add"
+                     Clicked="AddServicesItem_Cliked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ListView x:Name="ServiceListView" 
+                  ItemsSource="{Binding services}"
+                  HasUnevenRows="True"
+                  ItemTapped="ServiceListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <Image Source="{Binding Image}" HeightRequest="60" />
+                            <StackLayout HorizontalOptions="StartAndExpand">
+                                <Label Text="{Binding Name}" FontSize="Large"/>
+                                <Label Text="{Binding Description}" FontSize="Large"/>
+                                <Label Text="{Binding Location}" FontSize="Large"/>
+                                <Label Text="{Binding Image}" FontSize="Large"/>
+                            </StackLayout>
+                            
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

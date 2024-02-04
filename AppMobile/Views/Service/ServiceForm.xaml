@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMobile.Views.Services.ServicesForm">
+    <ContentPage.Content>
+        <StackLayout Padding="15" VerticalOptions="Center">
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                FontSize="Large"/>
+            
+            <Entry x:Name="TxtName" Placeholder="Enter your name" />
+            <Entry x:Name="TxtDescription" Placeholder="Enter your description" />
+            <Entry x:Name="TxtLocation" Placeholder="Enter your location" />
+            <Entry x:Name="TxtImage" Placeholder="Enter your image" />
+
+            <Button Text="Save"
+                    x:Name="ButtonSave"
+                    CornerRadius="15"
+                    Clicked="BtnSaveService_Clicked"></Button>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
